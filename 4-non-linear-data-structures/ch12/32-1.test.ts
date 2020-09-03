@@ -88,4 +88,4 @@ describe('[numIslands] TEST', () => {
 	});
 });
 
-export {};
+export { numIslands };
