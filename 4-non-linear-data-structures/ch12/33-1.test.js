@@ -20,17 +20,18 @@ const letterCombinations = digits => {
 		'9': 'wxyz',
 	};
 
-	const dfs = (index, path) => {
+	const dfs = (index, letterCombination) => {
 		// 끝까지 탐색하면 백트래킹
-		if (path.length === digits.length) {
-			result.push(path);
+		if (letterCombination.length === digits.length) {
+			result.push(letterCombination);
 			return;
 		}
 
 		for (let i = index; i < digits.length; i++) {
-			dic[digits[i]].split('').forEach(j => {
-				dfs(i + 1, path + j);
-			});
+			const lettersforDigit = dic[digits[i]];
+			for (const letter of lettersforDigit) {
+				dfs(i + 1, letterCombination + letter);
+			}
 		}
 	};
 
@@ -67,6 +68,68 @@ describe('[letterCombinations] TEST', () => {
 			'cd',
 			'ce',
 			'cf',
+		]);
+	});
+
+	it(`letterCombinations("234") toEqual:
+	[
+		'adg',
+		'adh',
+		'adi',
+		'aeg',
+		'aeh',
+		'aei',
+		'afg',
+		'afh',
+		'afi',
+		'bdg',
+		'bdh',
+		'bdi',
+		'beg',
+		'beh',
+		'bei',
+		'bfg',
+		'bfh',
+		'bfi',
+		'cdg',
+		'cdh',
+		'cdi',
+		'ceg',
+		'ceh',
+		'cei',
+		'cfg',
+		'cfh',
+		'cfi',
+	]
+	`, () => {
+		expect(letterCombinations('234')).toEqual([
+			'adg',
+			'adh',
+			'adi',
+			'aeg',
+			'aeh',
+			'aei',
+			'afg',
+			'afh',
+			'afi',
+			'bdg',
+			'bdh',
+			'bdi',
+			'beg',
+			'beh',
+			'bei',
+			'bfg',
+			'bfh',
+			'bfi',
+			'cdg',
+			'cdh',
+			'cdi',
+			'ceg',
+			'ceh',
+			'cei',
+			'cfg',
+			'cfh',
+			'cfi',
 		]);
 	});
 });

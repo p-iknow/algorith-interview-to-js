@@ -8,7 +8,8 @@
 			"runtimeArgs": [
 				"--inspect-brk",
 				"${workspaceRoot}/node_modules/.bin/jest",
-				"--runInBand"
+				"--runInBand",
+				"${fileBasename}"
 			],
 			"console": "integratedTerminal",
 			"internalConsoleOptions": "neverOpen",
