@@ -5,6 +5,7 @@
  * @param {string} digits
  * @return {string[]}
  */
+
 const letterCombinations = digits => {
 	if (digits.length === 0) return [];
 
