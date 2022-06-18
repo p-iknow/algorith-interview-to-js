@@ -1,5 +1,5 @@
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
+    def is_palindrome(self, s: str) -> bool:
         strs = []
         for char in s:
             if char.isalnum():
