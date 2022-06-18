@@ -4,7 +4,6 @@
 	"python.linting.enabled": true,
 	"python.linting.pylintArgs": ["--disable=C0111"],
 	"python.testing.pytestEnabled": true,
-	"python.testing.pytestArgs": ["2-python.ch06"],
 	"python.testing.unittestEnabled": false,
 	"[python]": {
 		"editor.formatOnSave": true,
