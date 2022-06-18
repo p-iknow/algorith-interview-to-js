@@ -1,6 +1,5 @@
 from ast import List
 
 
-class Solution:
-    def reverseString(self, s: List[str]) -> None:
-        s.reverse()
+def reverse_string(self, s: List[str]) -> None:
+    s.reverse()
