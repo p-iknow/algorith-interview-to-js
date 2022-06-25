@@ -17,7 +17,7 @@ class TestReverseString(unittest.TestCase):
         # when
         res = reverse_string(characters)
         # then
-        self.assertListEqual(res, ["o", "l", "l", "e", "h"])
+        assert res == ["o", "l", "l", "e", "h"]
 
     def test_case2(self):
         # given
@@ -25,7 +25,7 @@ class TestReverseString(unittest.TestCase):
         # when
         res = reverse_string(characters)
         # then
-        self.assertListEqual(res, ["h", "a", "n", "n", "a", "H"])
+        assert res == ["h", "a", "n", "n", "a", "H"]
 
 
 if __name__ == '__main__':
