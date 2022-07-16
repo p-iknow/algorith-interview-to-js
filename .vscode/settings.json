@@ -1,12 +1,13 @@
 {
-	"python.linting.pylintEnabled": true,
-	"python.linting.lintOnSave": true,
-	"python.linting.enabled": true,
-	"python.linting.pylintArgs": ["--disable=C0111"],
-	"python.testing.pytestEnabled": true,
-	"python.testing.unittestEnabled": false,
-	"[python]": {
-		"editor.formatOnSave": true,
-		"editor.codeActionsOnSave": { "source.organizeImports": true }
-	}
+  "python.linting.pylintEnabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintArgs": ["--disable=C0111"],
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": true,
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": { "source.organizeImports": true }
+  },
+  "python.testing.unittestArgs": ["-v", "-p", "*_test.py"]
 }
