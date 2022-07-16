@@ -9,5 +9,5 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": { "source.organizeImports": true }
   },
-  "python.testing.unittestArgs": ["-v", "-p", "*_test.py"]
+  "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "*_test.py"]
 }
