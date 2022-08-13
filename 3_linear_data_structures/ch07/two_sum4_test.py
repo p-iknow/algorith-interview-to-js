@@ -5,13 +5,15 @@ from typing import List
 
 
 def two_sum(nums: List[int], target: int) -> List[int]:
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)):
-            if nums[i] + nums[j] == target:
-                return [i, j]
+    nums_map = {}
+    # 키와 값을 바꿔서 딕셔너리로 저장
+    for i, num in enumerate(nums):
+        if target - num in nums_map:
+            return [nums_map[target - num], i]
+        nums_map[num] = i
 
 
-class TestTwoSum(unittest.TestCase):
+class TestTwoSum4(unittest.TestCase):
     def test_case1(self):
         # given
         nums = [2, 7, 11, 15]
